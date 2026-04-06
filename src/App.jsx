@@ -30,7 +30,7 @@ const addTask = () => {
 
 const toggleTask = (id) => { 
   const updated = todos.map((todo) => 
-     todo.id === id ? {...todos, completed: todo.id === id} : todo);
+     todo.id === id ? {...todo, completed: !todo.completed} : todo);
   setTodos(updated);
 };
 
