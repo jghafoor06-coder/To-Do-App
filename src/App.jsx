@@ -16,7 +16,7 @@ useEffect(() => {
 }, [todos])
 
 const addTask = () => {
-  if(task.trim === "") return;
+  if(task.trim() === "") return;
 
   const newTask = {
     id: Date.now(),
@@ -28,7 +28,7 @@ const addTask = () => {
   setTask("");
 }
 
-const toogleTask = (id) => { 
+const toggleTask = (id) => { 
   const updated = todos.map((todo) => 
      todo.id === id ? {...todos, completed: todo.id === id} : todo);
   setTodos(updated);
